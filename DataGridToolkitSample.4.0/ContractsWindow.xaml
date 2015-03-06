@@ -1,0 +1,9 @@
+﻿<Window
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:contractComponents1="clr-namespace:ContractComponents;assembly=ContractComponents.4.0"
+    x:Class="Contracts.ContractsWindow"
+    Title="ContractsWindow" Height="350" Width="525">
+
+    <contractComponents1:ContractsGridControl />
+</Window>

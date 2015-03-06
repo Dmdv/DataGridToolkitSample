@@ -4,17 +4,18 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{0D6A2B7C-7A36-40F2-9E84-C7AFD48A8727}</ProjectGuid>
+    <ProjectGuid>{305817CA-16B9-4DA1-9B51-6DF19A704846}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Contracts</RootNamespace>
-    <AssemblyName>DataGridToolkitSample</AssemblyName>
-    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <AssemblyName>DataGridToolkitSample.4.0</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WarningLevel>4</WarningLevel>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <ExpressionBlendVersion>12.0.51020.0</ExpressionBlendVersion>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -36,6 +37,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Net.Common.4.0">
+      <HintPath>..\Externals\Net.Common.4.0\Net.Common.4.0.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
@@ -91,20 +95,20 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ContractComponents\ContractComponents.csproj">
-      <Project>{485442F8-3943-4DFC-8B4E-CC8DA2D04D3F}</Project>
-      <Name>ContractComponents</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ContractService\ContractService.csproj">
-      <Project>{49c52b4c-edac-41d5-8980-8d3493b45bc7}</Project>
-      <Name>ContractService</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <Page Include="ContractsWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ContractComponents.4.0\ContractComponents.4.0.csproj">
+      <Project>{d85b21f7-60d9-4254-9311-27a69f110f33}</Project>
+      <Name>ContractComponents.4.0</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ContractService.4.0\ContractService.4.0.csproj">
+      <Project>{1d4405a0-0a1c-400b-8d09-894358779d2c}</Project>
+      <Name>ContractService.4.0</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
